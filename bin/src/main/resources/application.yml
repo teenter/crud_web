@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/university?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&characterSetResults=UTF-8&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+    username: grinch
+    password: password123
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    show-sql: false
+
+jwt:
+  secret: VerySecretToken
